@@ -22,10 +22,10 @@ export default function App() {
   //   });
   // })
   return (  
-   //  <WalkthroughScreen
-     //      appConfig={WalkthroughAppConfig}
-       //    appStyles={DynamicAppStyles} />   
-       <LoginScreen></LoginScreen>  
+      <WalkthroughScreen
+          appConfig={WalkthroughAppConfig}
+          appStyles={DynamicAppStyles} />   
+       //<LoginScreen></LoginScreen>  
     );
 }
 

@@ -4,30 +4,29 @@ const WalkthroughAppConfig = {
       walkthroughScreens: [
         
       {
-        icon: require("../assets/1.png"),
-       // title: "El Caminante",
-       // description: "Bienvenido",
+        icon: require("../assets/carrusel-1.png"),
+        title: "Bienvenido Caminante",
+        description: "Que tan lejos quieres llegar? Hagamoslo juntos",
       },
       {
-        icon: require("../assets/2.png"),
-       // title: "Educate",
-        // description:
-          // "Bienvenido",
+        icon: require("../assets/carrusel-2.png"),
+        title: "Conoce tus espacios",
+        description:"Usa promocionespara conseguir tus antojos y ve lugares favoritos",
       },
       {
-        icon: require("../assets/3.png"),
-        // title: "Get Notified",
-        // description: "Bienvenido",
+        icon: require("../assets/carrusel-3.png"),
+        title: "Los Lugares favoritos",
+        description: "Disfruta de lo mejor y los mas recomendado",
       },
       {
-        icon: require("../assets/4.png"),
-       // title: "El Caminante",
-       // description: "Bienvenido",
+        icon: require("../assets/carrusel-4.png"),
+        title: "Que quieres hacer?",
+        description: "te daremos la informacion de como llegar a donde quieras ir",
       },
       {
-        icon: require("../assets/5.png"),
-       // title: "El Caminante",
-       // description: "Bienvenido",
+        icon: require("../assets/carrusel-7.png"),
+        title: "Cada dia nuevos eventos",
+        description: "nunca te quedaras mas sin planes",
       }, 
     ],    
   },

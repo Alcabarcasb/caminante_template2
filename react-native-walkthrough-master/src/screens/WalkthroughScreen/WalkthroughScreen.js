@@ -45,9 +45,9 @@ const WalkthroughScreen = (props) => {
       slides={slides}
       renderItem={_renderItem}
       //Manejador para el evento 'done' en la última diapositiva.
-      showSkipButton={true}
+      showSkipButton={false}
       showDoneButton={true}
-      showNextButton={true}
+      showNextButton={false}
       />
    );
 };
