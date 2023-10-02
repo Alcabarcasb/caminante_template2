@@ -27,32 +27,9 @@ const LoginScreen = () => {
   
       const data = await response.json();
       const idToken = data.id_token;
-  
-      // Obtain role from ID token
-      const roleResponse = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDm7RVoLr71IqKiKP4_Z06XGU_SxBNMQSo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          idToken: idToken,
-        }),
-      });
-  
-      if (!roleResponse.ok) {
-        throw new Error('Failed to obtain role');
-      }
-  
-      const roleData = await roleResponse.json();
-      const role = roleData.users[0].customClaims.role;
-  
-      // If role is 'client' navigate to 'Home', otherwise show an error
-      if (role === 'admin') {
-        Alert.alert('Inicio de sesión exitoso como admin');
-        navigation.navigate('Home');
-      } else {
-        throw new Error('Invalid role');
-      }
+      const role = data.role
+      Alert.alert(`Inicio de sesión exitoso como ${role}`)
+
     } catch (error) {
       Alert.alert('Error', error.message);
     }
