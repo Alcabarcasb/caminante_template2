@@ -1,30 +1,29 @@
-import React, { useEffect, useState } from "react";
-import { ImageBackground, Text } from 'react-native';
-import { NavigationContainer } from '@react-navigation/native';
-import { createStackNavigator } from '@react-navigation/stack';
-// import Appearance from 'react-native'
-// import { AppearanceProvider, Appearance } from "react-native-appearance";
+import * as React from "react";
+import { NavigationContainer } from "@react-navigation/native";
+import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WalkthroughScreen from "./src/screens/WalkthroughScreen/WalkthroughScreen";
 import WalkthroughAppConfig from "./src/WalkthroughAppConfig";
 import DynamicAppStyles from "./src/DynamicAppStyles";
-import LoginScreen from "./src/screens/WalkthroughScreen/Login";
+import LoginScreen from "./src/screens/WalkthroughScreen/Login"; // Import your login screen
 
+const Stack = createNativeStackNavigator();
 
-
-const Stack = createStackNavigator();
-
-export default function App() {
-  // const [colorScheme, setColorScheme] = useState(Appearance.getColorScheme());
-
-  // useEffect(() => {
-  //   Appearance.addChangeListener(({ colorScheme }) => {
-  //     setColorScheme(colorScheme);
-  //   });
-  // })
-  return (  
-      <WalkthroughScreen
-          appConfig={WalkthroughAppConfig}
-          appStyles={DynamicAppStyles} />        
-    );
+function App() {
+  return (
+    <NavigationContainer>
+      <Stack.Navigator>
+        <Stack.Screen name="El Caminante">
+          {() => (
+            <WalkthroughScreen
+              appConfig={WalkthroughAppConfig}
+              appStyles={DynamicAppStyles}
+            />
+          )}
+        </Stack.Screen>
+        <Stack.Screen name="Login" component={LoginScreen} />
+      </Stack.Navigator>
+    </NavigationContainer>
+  );
 }
 
+export default App;

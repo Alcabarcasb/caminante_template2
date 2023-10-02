@@ -33,7 +33,7 @@ const dynamicStyles = (appStyles, colorScheme) => {
       justifyContent: 'center',
       alignItems: 'center',
       //backgroundColor: appStyles.colorSet[colorScheme].mainThemeForegroundColor,
-      //backgroundColor: '#CB38B7'
+      backgroundColor: '#CB38B7'
       },
     button: {
       fontSize: 18,
