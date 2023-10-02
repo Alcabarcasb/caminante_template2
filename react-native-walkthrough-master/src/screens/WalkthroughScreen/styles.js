@@ -32,7 +32,6 @@ const dynamicStyles = (appStyles, colorScheme) => {
       flex: 1,
       justifyContent: 'center',
       alignItems: 'center',
-      height: '100%',
       //backgroundColor: appStyles.colorSet[colorScheme].mainThemeForegroundColor,
       //backgroundColor: '#CB38B7'
       },
