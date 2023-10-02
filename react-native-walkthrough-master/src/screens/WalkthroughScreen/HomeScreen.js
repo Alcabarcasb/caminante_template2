@@ -5,7 +5,7 @@ class HomeScreen extends React.Component {
   render() {
     return (
       <View style={styles.container}>
-        <Text>Bienvenido a la pantalla de inicio!</Text>
+        <Text>Bienvenido Administrador</Text>
       </View>
     );
   }
