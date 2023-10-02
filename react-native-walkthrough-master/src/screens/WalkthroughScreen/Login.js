@@ -41,7 +41,7 @@ const LoginScreen = ({}) => {
       });
   
       if (!roleResponse.ok) {
-        throw new Error('Error al obtener el role solicitado');
+        throw new Error('Error al obtener el rol solicitado');
       }
   
       const roleData = await roleResponse.json();
