@@ -7,7 +7,8 @@ import { createStackNavigator } from '@react-navigation/stack';
 import WalkthroughScreen from "./src/screens/WalkthroughScreen/WalkthroughScreen";
 import WalkthroughAppConfig from "./src/WalkthroughAppConfig";
 import DynamicAppStyles from "./src/DynamicAppStyles";
-//import LoginScreen from "./src/screens/WalkthroughScreen/Login";
+import LoginScreen from "./src/screens/WalkthroughScreen/Login";
+
 
 
 const Stack = createStackNavigator();
@@ -21,9 +22,10 @@ export default function App() {
   //   });
   // })
   return (  
-     <WalkthroughScreen
-           appConfig={WalkthroughAppConfig}
-           appStyles={DynamicAppStyles} />     
+   //  <WalkthroughScreen
+     //      appConfig={WalkthroughAppConfig}
+       //    appStyles={DynamicAppStyles} />   
+       <LoginScreen></LoginScreen>  
     );
 }
 
