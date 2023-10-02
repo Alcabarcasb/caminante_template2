@@ -20,7 +20,7 @@ const dynamicStyles = (appStyles, colorScheme) => {
     image: {
       flex: 2,
       width: 200,
-      height: 400,
+      height: 300,
       resizeMode: 'contain',
       marginBottom: 60,
       paddingTop: 20,
@@ -33,7 +33,7 @@ const dynamicStyles = (appStyles, colorScheme) => {
       justifyContent: 'center',
       alignItems: 'center',
       //backgroundColor: appStyles.colorSet[colorScheme].mainThemeForegroundColor,
-      backgroundColor: '#CB38B7'
+      backgroundColor: '#f1f1f1'
       },
     button: {
       fontSize: 18,

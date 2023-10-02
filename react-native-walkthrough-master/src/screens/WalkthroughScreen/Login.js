@@ -23,7 +23,7 @@ const LoginScreen = ({}) => {
       });
   
       if (!response.ok) {
-        throw new Error('Invalid credentials');
+        throw new Error('Usuario y clave incorrecto');
       }
   
       const data = await response.json();
@@ -41,7 +41,7 @@ const LoginScreen = ({}) => {
       });
   
       if (!roleResponse.ok) {
-        throw new Error('Failed to obtain role');
+        throw new Error('Error al obtener el role solicitado');
       }
   
       const roleData = await roleResponse.json();
@@ -64,7 +64,7 @@ const LoginScreen = ({}) => {
     <View>
       <TextInput placeholder="Usuario" onChangeText={setUsername} />
       <TextInput placeholder="Contraseña" secureTextEntry onChangeText={setPassword} />
-      <Button title="Iniciar sesión" onPress={() => this.props.navigation.navigate('HomeScreen')} />
+      <Button title="Iniciar sesión" onPress={() => this.props.navigation.navigate('App')} />
     </View>
   );
 };
