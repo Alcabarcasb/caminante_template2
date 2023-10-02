@@ -1,9 +1,7 @@
 import React, { useState } from 'react';
 import { View, TextInput, Button, Alert } from 'react-native';
-import Estilos from "./styles";
 //import Homescreen from './HomeScreen';
 
-const styles = Estilos(appStyles, colorScheme);
 const LoginScreen = ({ navigation }) => {
   const [username, setUsername] = useState('');
   const [password, setPassword] = useState('');

@@ -3,6 +3,7 @@ import { View, Image, Text, useColorScheme } from "react-native";
 import PropTypes from "prop-types";
 import AppIntroSlider from "react-native-app-intro-slider";
 import dynamicStyles from "./styles";
+import { useNavigation } from "@react-navigation/native";
 //import LoginScreen from './Login';
 //import Homescreen from './src/screens/WalkthroughScreen/HomeScreen';
 
@@ -11,6 +12,7 @@ const WalkthroughScreen = (props) => {
   const appStyles = props.appStyles;
   const colorScheme = useColorScheme();
   const styles = dynamicStyles(appStyles, colorScheme);
+  const navigation = useNavigation();
 
   const slides = appConfig.onboardingConfig.walkthroughScreens.map(
     (screenSpec, index) => {
@@ -48,6 +50,7 @@ const WalkthroughScreen = (props) => {
       showSkipButton={true}
       showDoneButton={true}
       showNextButton={true}
+      onDone={() => navigation.navigate('Login')}
       />
    );
 };
