@@ -5,6 +5,7 @@ import WalkthroughScreen from "./src/screens/WalkthroughScreen/WalkthroughScreen
 import WalkthroughAppConfig from "./src/WalkthroughAppConfig";
 import DynamicAppStyles from "./src/DynamicAppStyles";
 import LoginScreen from "./src/screens/WalkthroughScreen/Login";
+import HomeScreen from "./src/screens/WalkthroughScreen/HomeScreen";
 //import homeSreen from "./src/screens/WalkthroughScreen/HomeScreen"; // Import your login screen
 
 const Stack = createNativeStackNavigator();
@@ -22,6 +23,7 @@ function App() {
           )}
         </Stack.Screen>
         <Stack.Screen name="Login" component={LoginScreen} />
+        <Stack.Screen name="HomeScreen" component={HomeScreen} />
       </Stack.Navigator>
     </NavigationContainer>
   );

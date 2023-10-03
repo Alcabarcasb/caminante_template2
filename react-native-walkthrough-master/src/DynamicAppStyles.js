@@ -5,7 +5,7 @@ const lightColorSet = {
 
 const darkColorSet = {
   mainThemeBackgroundColor: "#121212",
-  mainThemeForegroundColor: "#788eec",
+  mainThemeForegroundColor: "#787eec",
 };
 
 const colorSet = {

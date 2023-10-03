@@ -29,40 +29,18 @@ const LoginScreen = ({}) => {
       });
   
       if (!response.ok) {
-        throw new Error('Usuario y clave incorrecto');
+        throw new Error('Invalid credentials');
       }
   
       const data = await response.json();
       const idToken = data.id_token;
-  
-      // Obtain role from ID token
-      const roleResponse = await fetch('https://identitytoolkit.googleapis.com/v1/accounts:lookup?key=AIzaSyDm7RVoLr71IqKiKP4_Z06XGU_SxBNMQSo', {
-        method: 'POST',
-        headers: {
-          'Content-Type': 'application/json',
-        },
-        body: JSON.stringify({
-          idToken: idToken,
-        }),
-      });
-  
-      if (!roleResponse.ok) {
-        throw new Error('Error al obtener el rol solicitado');
-      }
-  
-      const roleData = await roleResponse.json();
-      const role = roleData.users[0].customClaims.role;
-  
-      // If role is 'client' navigate to 'Home', otherwise show an error
-      if (role === 'admin') {
-        Alert.alert('Inicio de sesión exitoso como admin');
-        navigation.navigate('Home');
-      } else {
-        throw new Error('Invalid role');
-      }
+      const role = data.role
+      Alert.alert(`Inicio de sesión exitoso como ${role}`)
+
     } catch (error) {
       Alert.alert('Error', error.message);
     }
+    navigation.navigate('HomeScreen')
   };
    
   return (
@@ -86,7 +64,8 @@ const LoginScreen = ({}) => {
                     onChangeText={setPassword} />
 
                   <MyButton
-                        onPress={() => navigation.navigate(homeScreen)} 
+                        // onPress={() => navigation.navigate(homeScreen)} 
+                        onPress={() =>handleLogin()} 
                         type={"primary"} 
                         size={"large"} 
                         label={"Ingresar"}
@@ -129,10 +108,12 @@ const styles = StyleSheet.create({
       width: 150,
       height: 180,
       resizeMode: 'contain',
-      paddingTop: 20,
+      paddingTop: 200,
+      paddingLeft: 190,
+      paddingBottom: 130,
       borderRadius: 10,
       marginStart: '25%',
-      //backgroundColor:'#690E73',
+      // backgroundColor:'#690E73',
       shadowOffset: {
         width: 0,
         height: 2,},
@@ -140,7 +121,7 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     justifyContent: 'center',
-    paddingHorizontal: 20,
+    // paddingHorizontal: 20,
     width: '100%',
     height: '100%',
   },

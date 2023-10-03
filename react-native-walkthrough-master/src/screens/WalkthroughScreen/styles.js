@@ -16,6 +16,7 @@ const dynamicStyles = (appStyles, colorScheme) => {
       color: 'black',
       paddingLeft: 10,
       paddingRight: 10,
+      paddingBottom: 150,
     },
     image: {
       flex: 2,
