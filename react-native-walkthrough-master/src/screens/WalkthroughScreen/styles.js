@@ -42,7 +42,12 @@ const dynamicStyles = (appStyles, colorScheme) => {
     margin: 12,
     borderWidth: 1,
     padding: 10,
-    }
+    },
+    containerFondo: {
+      width:"100%",
+      height:"100%",
+      //backgroundColor: '#FF0080',
+    },
   });
 };
 export default dynamicStyles;

@@ -4,6 +4,7 @@ import PropTypes from "prop-types";
 import AppIntroSlider from "react-native-app-intro-slider";
 import dynamicStyles from "./styles";
 import { useNavigation } from "@react-navigation/native";
+import { ImageBackground } from "react-native-web";
 //import LoginScreen from './Login';
 //import Homescreen from './src/screens/WalkthroughScreen/HomeScreen';
 
@@ -32,6 +33,7 @@ const WalkthroughScreen = (props) => {
         source={item.image}
         size={100}
         color="blue"
+        scalesPageToFit={false} 
       />
      <View>
         <Text style={styles.title}>{item.title}</Text>
@@ -47,9 +49,14 @@ const WalkthroughScreen = (props) => {
       slides={slides}
       renderItem={_renderItem}
       //Manejador para el evento 'done' en la última diapositiva.
+      dotStyle={{backgroundColor: 'gray'}}
+      activeDotStyle={{backgroundColor: 'red'}}
       showSkipButton={false}
       showDoneButton={true}
       showNextButton={true}
+      nextLabel="Siguiente"
+      doneLabel="Terminar"
+      skipLabel="Atras"
       onDone={() => navigation.navigate('Login')}
       />
    );
