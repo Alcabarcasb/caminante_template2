@@ -24,8 +24,8 @@ const dynamicStyles = (appStyles, colorScheme) => {
       resizeMode: 'contain',
       marginBottom: 60,
       paddingTop: 20,
-      borderRadius: 20
-      //tintColor: 'white',
+      borderRadius: 20,
+      //tintColor: 'blue',
     },
     
     container: {
@@ -33,19 +33,10 @@ const dynamicStyles = (appStyles, colorScheme) => {
       justifyContent: 'center',
       alignItems: 'center',
       //backgroundColor: appStyles.colorSet[colorScheme].mainThemeForegroundColor,
-      backgroundColor: '#f1f1f1'
+      backgroundColor: '#f1f1f1',
       },
-    button: {
-      fontSize: 18,
-      color: 'white',
-      marginTop: 10,
-    },
-    backgroundImage: {
-      flex: 1,
-      resizeMode: 'cover',
-      justifyContent: 'center',
-    },
-    textInput: {
+
+   textInput: {
     height: 40,
     margin: 12,
     borderWidth: 1,

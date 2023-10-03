@@ -4,7 +4,8 @@ import { createNativeStackNavigator } from "@react-navigation/native-stack";
 import WalkthroughScreen from "./src/screens/WalkthroughScreen/WalkthroughScreen";
 import WalkthroughAppConfig from "./src/WalkthroughAppConfig";
 import DynamicAppStyles from "./src/DynamicAppStyles";
-import LoginScreen from "./src/screens/WalkthroughScreen/Login"; // Import your login screen
+import LoginScreen from "./src/screens/WalkthroughScreen/Login";
+//import homeSreen from "./src/screens/WalkthroughScreen/HomeScreen"; // Import your login screen
 
 const Stack = createNativeStackNavigator();
 
